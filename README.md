@@ -49,10 +49,10 @@ from InfoImputer.Auto import Imputer
 data = pd.read_csv(r"your directory")
 
 #if you want to use the correlation coefficient threshold (here threshold = 0.1):
-FilledData = Imputer(data,'Transported',0.1,GradientBoostingRegressor,ExtraTreesClassifier)
+FilledData = Imputer(data,TargetName,0.1,GradientBoostingRegressor,ExtraTreesClassifier)
 
 #if you want to use N most informative features using mutual information (here N = 3)
-FilledData = Imputer(data,'Transported',3,GradientBoostingRegressor,ExtraTreesClassifier)
+FilledData = Imputer(data,TargetName,3,GradientBoostingRegressor,ExtraTreesClassifier)
 ```
 
 
