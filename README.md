@@ -32,3 +32,28 @@ https://www.kaggle.com/code/khashayarrahimi94/why-you-should-not-use-correlation
 
 Therefore, besides some automation and ease of use in this imputer, I add mutual information score as a criteria for selecting dependece and informational features for the features with missing values that we want to fill them.
 
+## Install
+
+```shell
+pip install AutoImputer
+```
+## Example
+
+```python
+import pandas as pd
+from sklearn.ensemble import ExtraTreesClassifier
+from sklearn.ensemble import GradientBoostingRegressor
+import InfoImputer
+from InfoImputer.Auto import Imputer
+#import the data in pandas format
+data = pd.read_csv(r"your directory")
+
+#if you want to use the correlation coefficient threshold (here threshold = 0.1):
+FilledData = Imputer(data,'Transported',0.1,GradientBoostingRegressor,ExtraTreesClassifier)
+
+#if you want to use N most informative features using mutual information (here N = 3)
+FilledData = Imputer(data,'Transported',3,GradientBoostingRegressor,ExtraTreesClassifier)
+```
+
+
+
