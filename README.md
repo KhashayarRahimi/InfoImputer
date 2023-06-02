@@ -35,7 +35,7 @@ Therefore, besides some automation and ease of use in this imputer, I add mutual
 ## Install
 
 ```shell
-pip install AutoImputer
+pip install Info-Imputer
 ```
 ## Example
 
